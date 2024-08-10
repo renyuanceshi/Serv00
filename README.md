@@ -22,4 +22,4 @@
 
 |姓名|主页|内容|
 | :------------: | :------------: | :------------: |
-|lopins|[https://github.com/lopins/serv00-auto-scripts]||
+|lopins|https://github.com/lopins/serv00-auto-scripts|控制面板自动登录脚本|
