@@ -40,6 +40,8 @@ bash <(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/i
 ```
 mkdir -p ~/domains/cloudflared && cd ~/domains/cloudflared
 wget https://cloudflared.bowring.uk/binaries/cloudflared-freebsd-latest.7z && 7z x cloudflared-freebsd-latest.7z && rm cloudflared-freebsd-latest.7z && mv -f ./temp/* ./cloudflared && rm -rf temp
+or
+wget https://github.com/renyuanceshi/Serv00/raw/main/cloudflared/cloudflared-freebsd.7z && 7z x cloudflared-freebsd.7z && rm cloudflared-freebsd.7z && mv -f ./temp/* ./cloudflared && rm -rf temp
 ```
 ### pm2测试运行cloudflared进程
 在cloudflared程序所在目录运行：
