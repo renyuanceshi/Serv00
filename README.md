@@ -23,3 +23,59 @@
 |姓名|主页|内容|
 | :------------: | :------------: | :------------: |
 |lopins|https://github.com/lopins/serv00-auto-scripts|控制面板自动登录脚本|
+
+<br />
+<br />
+
+# SERV00 3个必备工具配置
+
+## 安装PM2
+安装脚本
+```
+bash <(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)
+```
+<br />
+
+## 安装Cloudflared
+```
+mkdir -p ~/domains/cloudflared && cd ~/domains/cloudflared
+wget https://cloudflared.bowring.uk/binaries/cloudflared-freebsd-latest.7z && 7z x cloudflared-freebsd-latest.7z && rm cloudflared-freebsd-latest.7z && mv -f ./temp/* ./cloudflared && rm -rf temp
+```
+### pm2测试运行cloudflared进程
+在cloudflared程序所在目录运行：
+```
+pm2 start ./cloudflared -- tunnel --edge-ip-version auto --protocol http2 --heartbeat-interval 10s run --token ARGO_TOKEN
+```
+ARGO_TOKEN 替换成自己真实有效的token
+
+<br />
+
+## 升级go语言环境
+### 创建安装目录
+```
+mkdir -p ~/local/soft && cd ~/local/soft
+```
+### 下载编译好的 go1.22 的程序包
+```
+wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz
+```
+### 解压
+```
+tar -xzvf go1.22.0.freebsd-amd64.tar.gz
+```
+### 删除压缩文件
+```
+rm go1.22.0.freebsd-amd64.tar.gz
+```
+### 修改 .profile 文件
+```
+echo 'export PATH=~/local/soft/go/bin:$PATH' >> ~/.profile
+```
+### 使 .profile 的修改生效
+```
+source ~/.profile
+```
+### 检查 go 版本
+```
+go version
+```
