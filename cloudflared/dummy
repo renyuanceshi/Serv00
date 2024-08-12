@@ -1,4 +1,4 @@
 https://github.com/renyuanceshi/Serv00/blob/1c2c85f8a2d4429979b053293e69dceba309d13a/cloudflared/cloudflared-freebsd.7z
 
-wget https://github.com/renyuanceshi/Serv00/raw/main/cloudflared/cloudflared-freebsd.7z && 7z x cloudflared-freebsd-latest.7z && rm cloudflared-freebsd-latest.7z && mv -f ./temp/* ./cloudflared && rm -rf temp
+wget https://github.com/renyuanceshi/Serv00/raw/main/cloudflared/cloudflared-freebsd.7z && 7z x cloudflared-freebsd.7z && rm cloudflared-freebsd.7z && mv -f ./temp/* ./cloudflared && rm -rf temp
 
