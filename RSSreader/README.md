@@ -1,6 +1,7 @@
 # SERV00部署Web页的RSS阅读器
 
 ## SERV00网站部分
+### Enable Run your own applications
 ### 开放端口
 Port : random
 Port : tcp
@@ -38,7 +39,7 @@ It takes time to build the execute.
 ### 制作执行脚本
 ```
 echo '#! /bin/bash
-nohup ~/domains/yarr/yarr -addr 0.0.0.0:1155 -auth dino:dino >/dev/null 2>&1 &' > rss.sh && chmod +x rss.sh
+nohup ~/domains/yarr/yarr -addr 0.0.0.0:<port> -auth <user name>:<password> >/dev/null 2>&1 &' > rss.sh && chmod +x rss.sh
 ```
 
 ### 保活步骤
@@ -46,7 +47,7 @@ nohup ~/domains/yarr/yarr -addr 0.0.0.0:1155 -auth dino:dino >/dev/null 2>&1 &' 
 crontab -e
 
 #添加如下内容
-@reboot bash /home/dino/domains/yarr/rss.sh
+@reboot bash /home/renyuanceshi/domains/yarr/rss.sh
 ```
 ## 贡献
 
